@@ -17,10 +17,10 @@ class PersonaController extends Controller
             'telefono' => 'nullable|string|max:20',
         ]);
 
-        // 2. Inserción usando Eloquent
+       
         $persona = Persona::create($validatedData);
 
-        // 3. Respuesta JSON estandarizada (Status 201: Created)
+        
         return response()->json([
             'mensaje' => 'Persona registrada exitosamente',
             'data' => $persona
