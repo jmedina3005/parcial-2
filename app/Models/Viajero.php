@@ -9,9 +9,15 @@ class Viajero extends Model
 {
     use HasFactory;
 
-
     protected $fillable = [
+        'persona_id',
         'destino',
         'tipo_viaje'
     ];
+
+    
+    public function persona()
+    {
+        return $this->belongsTo(Persona::class);
+    }
 }
